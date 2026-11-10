@@ -1,0 +1,36 @@
+# AI Context Ignore - Prevents LLMs and tools from loading high-token / low-value files
+
+# Lockfiles (Major token sink: ~60k tokens)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lockb
+
+# Generated & Dependencies
+node_modules/
+.next/
+out/
+build/
+coverage/
+.turbo/
+
+# Assets & Media
+public/**/*.svg
+public/**/*.png
+public/**/*.jpg
+public/**/*.jpeg
+public/**/*.ico
+public/**/*.webp
+*.pdf
+
+# Environment & Secrets
+.env*
+!.env.example
+*.pem
+*.key
+
+# Logs & Cache
+*.log
+*.tsbuildinfo
+next-env.d.ts
+
