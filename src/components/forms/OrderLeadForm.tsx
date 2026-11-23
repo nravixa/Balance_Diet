@@ -81,8 +81,9 @@ Please confirm delivery availability and payment details.`;
         {/* Primary Culinary Gourmet Bowl Image */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=2400&q=85"
+          src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=1400&q=75"
           alt=""
+          loading="lazy"
           data-parallax="true"
           data-parallax-speed="0.25"
           data-parallax-scale="1.15"

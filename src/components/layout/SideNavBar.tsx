@@ -20,13 +20,15 @@ export function SideNavBar() {
   const [showScrollTop, setShowScrollTop] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      const hero = document.getElementById("hero");
-      if (hero) {
-        const rect = hero.getBoundingClientRect();
-        setShowScrollTop(rect.bottom < 120);
-      } else {
-        setShowScrollTop(window.scrollY > 400);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setShowScrollTop(window.scrollY > 350);
+          ticking = false;
+        });
+        ticking = true;
       }
     };
 

@@ -13,8 +13,9 @@ export function SocialProofSection() {
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2400&q=85"
+          src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=70"
           alt=""
+          loading="lazy"
           data-parallax="true"
           data-parallax-speed="0.25"
           data-parallax-scale="1.12"

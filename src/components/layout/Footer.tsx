@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <footer
       id="footer"
-      className="relative min-h-screen flex flex-col justify-between overflow-hidden select-none pb-16 sm:pb-14 md:pb-8"
+      className="relative flex flex-col justify-between overflow-hidden select-none pb-16 sm:pb-14 md:pb-8 [content-visibility:auto] [contain-intrinsic-size:1px_700px]"
     >
       {/* ================================================================== */}
       {/* 1. MISTY SAHYADRI LANDSCAPE BACKDROP & CELESTIAL SUN GLOW          */}

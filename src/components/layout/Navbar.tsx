@@ -37,14 +37,15 @@ export function Navbar() {
   const { theme, toggleTheme, setTheme } = useTheme();
 
   useEffect(() => {
-    const handleScroll = () => {
+    let ticking = false;
+
+    const updateScrollState = () => {
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 25);
 
       const footerEl = document.getElementById("footer");
       if (footerEl) {
-        const rect = footerEl.getBoundingClientRect();
-        setInFooter(rect.top < window.innerHeight - 60);
+        setInFooter(footerEl.offsetTop - scrollY < window.innerHeight - 60);
       }
 
       const sections = NAV_LINKS.map((l) => ({
@@ -60,10 +61,18 @@ export function Navbar() {
           break;
         }
       }
+      ticking = false;
+    };
+
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateScrollState);
+        ticking = true;
+      }
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
+    updateScrollState();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 

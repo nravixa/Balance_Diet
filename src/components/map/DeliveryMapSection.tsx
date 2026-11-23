@@ -8,8 +8,9 @@ export function DeliveryMapSection() {
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=2400&q=85"
+          src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&w=1200&q=70"
           alt=""
+          loading="lazy"
           data-parallax="true"
           data-parallax-speed="0.26"
           data-parallax-scale="1.12"
